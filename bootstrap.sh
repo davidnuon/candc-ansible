@@ -13,7 +13,7 @@ echo "Grab updates..."
 apt-get update
 
 echo "Installing tools..."
-apt-get install -y python3-pip
+apt-get install -y python3-pip git
 
 echo "Installing ansible..."
 pip3 install ansible
