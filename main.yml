@@ -1,0 +1,10 @@
+---
+
+- name: Ubuntu desktop environment playbook
+  hosts: localhost
+  become: true
+  roles:
+    - { role: vscode,  become: true }
+    - { role: desktop,  become: true }
+    - { role: nodejs,  become: true }
+

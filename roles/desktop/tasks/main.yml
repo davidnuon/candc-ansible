@@ -1,0 +1,12 @@
+---
+
+- name: Install psutil
+  pip: name=psutil
+
+- name: Copy wallpaper file
+  copy: src=wallpaper.png dest=/home/codeandcoffee/.wallpaper.png owner=codeandcoffee group=codeandcoffee mode=600
+
+- name: Set GNOME Wallpaper
+  become_user: codeandcoffee
+  dconf: key="/org/gnome/desktop/background/picture-uri" value="'file:///home/codeandcoffee/.wallpaper.png'"
+    
